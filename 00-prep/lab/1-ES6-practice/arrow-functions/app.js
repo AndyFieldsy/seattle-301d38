@@ -206,14 +206,14 @@ console.log(joe.scope());
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scopeArrow());
+console.log(joe.scopeArrow() + this + 'here');
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
 // "this" is referring to the Student object that was created for Joe joe.scope() is invoked.
 
 // 2. What is "this" when joe.scopeArrow() is invoked?
-// I believe "this" is referring to nothing when we use an arrow function this way.
+// This would be referring to the Student object, which contains name Joe age Schmoe and hometown 100
 
 // 3. Explain why "this" is different when an arrow function is used.
 // Arrow function do not bind "this", the context of this is in the global window object, so this cannot be used properly in arrow functions.
